@@ -1,4 +1,4 @@
-# OSINT Google Dork Generator (Interactive + Colorama + Export)
+# OSINT Google Dork Generator
 
 This project is an **interactive Python tool for OSINT investigations**, designed to
 generate Google Dorks based on different types of targets:
