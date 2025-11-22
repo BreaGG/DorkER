@@ -35,7 +35,7 @@ Auto-OSINT is intended for professionals who require a fast and efficient method
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/auto-osint.git
+git clone https://github.com/BreaGG/DorkER
 cd auto-osint
 ````
 
