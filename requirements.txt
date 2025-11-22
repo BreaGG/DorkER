@@ -1,0 +1,7 @@
+aiohttp
+aiofiles
+beautifulsoup4
+colorama
+requests
+tqdm
+python-dateutil

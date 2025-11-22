@@ -1,101 +1,128 @@
-# OSINT Google Dork Generator
+# Auto-OSINT Google Dork Generator
 
-This project is an **interactive Python tool for OSINT investigations**, designed to
-generate Google Dorks based on different types of targets:
+Auto-OSINT is a command-line tool designed to support Open Source Intelligence (OSINT) investigations by generating well-structured and context-specific Google Dorks.  
+It allows analysts, researchers, and cybersecurity professionals to automate part of the reconnaissance phase by producing relevant search queries for emails, usernames, domains, and subdomains.  
+The tool is built with modularity in mind, making it suitable both for manual OSINT workflows and for integration into broader automated pipelines.
 
-- Email addresses  
-- Usernames / aliases  
-- Domains  
-- Subdomains  
+## Overview
 
-The tool includes:
+Google Dorks are advanced search operators used to extract publicly available but often overlooked information from the web.  
+By automating their generation, Auto-OSINT helps analysts avoid repetitive manual work and ensures more consistent, broad, and systematic search coverage.  
 
-✅ Interactive menu  
-✅ Colorama-based CLI (colored terminal)  
-✅ Automatic export to `.txt`  
-✅ Specialized Dorks for each target type  
-✅ Clean and modular code  
+The tool provides:
 
----
+- A structured approach to OSINT discovery.
+- A reliable way to generate categorized intelligence queries.
+- A foundation for later expansion into automated scraping, monitoring, or reporting frameworks.
 
-## 🚀 Features
+Auto-OSINT is intended for professionals who require a fast and efficient method to generate reconnaissance queries while maintaining full control of the investigation.
 
-### 🔍 Target Types Supported
-You can generate OSINT-focused Google Dorks for:
+## Features
 
-- **Email** (example: `john@example.com`)  
-- **Username** (example: `johnny99`)  
-- **Domain** (example: `example.com`)  
-- **Subdomain** (example: `dev.example.com`)  
+- **Fully interactive interface:** Users can choose the category of target they want to investigate through a clean terminal menu.
+- **Multiple target types supported:**  
+  - Email addresses  
+  - Usernames and aliases  
+  - Domains  
+  - Subdomains  
+- **Automatic query categorization:** Dorks are grouped logically into areas such as documents, leaks, indexed files, exposed services, and social profiles.
+- **Output export capability:** Users can export generated dorks into `.txt` files, useful for investigations, case documentation, or penetration testing reports.
+- **Color-based interface:** The tool uses `colorama` to improve readability and navigation.
+- **Expandability:** The internal structure is designed so that more modules—such as automated scanning, result parsing, or integration with OSINT APIs—can be added with ease.
 
-Each option generates a unique set of targeted Dorks:
-documents, leaks, exposed directories, social media, archives, and more.
+## Installation
 
----
-
-## 📦 Requirements
-
-The only external library used is:
-
-```
-
-colorama
-
-````
-
-Install it with:
+Clone the repository:
 
 ```bash
-pip install colorama
+git clone https://github.com/yourusername/auto-osint.git
+cd auto-osint
 ````
 
----
-
-## ▶️ Usage
-
-Run the script:
+Install Python dependencies:
 
 ```bash
-python dork_generator.py
+pip install -r requirements.txt
 ```
 
-Then follow the interactive menu:
+Run the program:
 
-1. Choose the target type
-2. Enter the value (email, username, domain…)
-3. View the generated Dorks
-4. Optionally export them to a `.txt` file
-
-Example export file name:
-
-```
-dorks_john_example_com.txt
+```bash
+python3 auto-osint.py
 ```
 
----
+## Usage Guide
 
-## 📁 Project Structure
+Once executed, Auto-OSINT presents a clear menu allowing the user to select what type of information they want to generate dorks for:
+
+1. Email addresses
+2. Usernames / aliases
+3. Domains
+4. Subdomains
+
+After entering the target, the tool automatically generates a structured list of Google Dorks adapted to the nature of the input.
+Each category of dorks is printed to the console and can be exported to a sanitized `.txt` file for later use.
+
+This makes the tool suitable for:
+
+* OSINT investigations
+* Digital footprint assessments
+* Threat intelligence gathering
+* Penetration testing reconnaissance
+* Academic or training purposes
+
+Auto-OSINT does not perform active scanning or interact with external systems; it only generates publicly searchable queries, making it compliant with ethical OSINT standards.
+
+## Exported Files
+
+The tool can export results in plain-text format.
+Files follow the naming pattern:
 
 ```
-│── dork_generator.py    # Main script
-│── README.md            # Documentation
-│── .gitignore           # macOS + Python ignores
+dorks_<target>.txt
 ```
 
----
+All file names are automatically sanitized to avoid special characters or filesystem issues.
+These exported files can be integrated into OSINT documentation, case reports, or digital investigations.
 
-## 🛡️ Ethical Disclaimer
+## Project Structure
 
-This tool is intended **solely for legitimate OSINT research**, cybersecurity training,
-defensive analysis, and educational purposes.
+```
+auto-osint/
+│── auto-osint.py          # Main program
+│── requirements.txt        # Python dependencies
+│── README.md               # Documentation
+│── LICENSE                 # MIT License
+│── .gitignore              # Files and folders excluded from version control
+```
 
-Do not use it for unauthorized access, harassment, or any illegal activity.
+This minimal structure ensures the repository stays clean and that only essential files are included.
 
----
+## Dependencies
 
-## 🤝 Contributions
+Auto-OSINT uses several Python libraries to support its functionality, including:
 
-Feel free to submit pull requests, suggestions, or new Dork categories.
-All contributions are welcome!
+* aiohttp
+* aiofiles
+* beautifulsoup4
+* colorama
+* requests
+* tqdm
+* python-dateutil
 
----
+These dependencies are maintained in `requirements.txt` to ensure reproducibility across systems.
+
+## Legal Disclaimer
+
+Auto-OSINT is designed exclusively for lawful OSINT work, research, training, and security analysis.
+The author does not assume responsibility for any misuse, unauthorized investigation, or illegal activity conducted with this tool.
+Users must confirm that they have authorization before performing any form of digital reconnaissance against a target.
+
+By using Auto-OSINT, you agree to comply with applicable laws and ethical standards.
+
+## Author
+
+Developed by Alejandro Brea Gascón.
+Contributions, improvements, and forks are welcome.
+
+```
