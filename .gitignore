@@ -55,6 +55,7 @@ report/
 output/
 results/
 exports/
+evidences/
 
 # Temporary working directories
 tmp/
